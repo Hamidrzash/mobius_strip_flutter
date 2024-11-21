@@ -7,4 +7,4 @@ A Flutter implementation of Möbius Strip, using widgets and custom clipper, ins
 
 ## 🎥 Preview
 ![](https://github.com/Hamidrzash/mobius_strip_flutter/blob/main/preview1.png)
-![](https://github.com/Hamidrzash/cmobius_strip_flutter/blob/main/preview2.png)
+![](https://github.com/Hamidrzash/mobius_strip_flutter/blob/main/preview2.png)
