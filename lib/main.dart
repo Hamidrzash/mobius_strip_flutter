@@ -42,33 +42,28 @@ class _MobiusStripPageState extends State<MobiusStripPage> {
         child: Stack(
           children: [
             Center(
-              child: AnimatedRotation(
-                turns: 3,
+              child: Stack(
                 alignment: Alignment.center,
-                duration: const Duration(milliseconds: 2000),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    ClipPath(
+                children: [
+                  ClipPath(
+                    clipper: const HoleClipper(),
+                    child: MobiusRing(c1: c1, c2: c2),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40),
+                    child: ClipPath(
+                      clipper: const HoleClipper(),
+                      child: MobiusRing2(c1: c1, c2: c2),
+                    ),
+                  ),
+                  ClipPath(
+                    clipper: const HalfClipper(),
+                    child: ClipPath(
                       clipper: const HoleClipper(),
                       child: MobiusRing(c1: c1, c2: c2),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 40),
-                      child: ClipPath(
-                        clipper: const HoleClipper(),
-                        child: MobiusRing2(c1: c1, c2: c2),
-                      ),
-                    ),
-                    ClipPath(
-                      clipper: const HalfClipper(),
-                      child: ClipPath(
-                        clipper: const HoleClipper(),
-                        child: MobiusRing(c1: c1, c2: c2),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Positioned(
